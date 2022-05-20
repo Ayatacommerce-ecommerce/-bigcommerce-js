@@ -1,6 +1,6 @@
 // test 
 var data = document.currentScript.getAttribute('one');
-
+console.log("data",data)
 // graphql call 
 fetch('/graphql', {
     method: 'POST',
