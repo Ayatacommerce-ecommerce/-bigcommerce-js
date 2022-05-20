@@ -1,5 +1,5 @@
 // test 
-import { hooks } from '@bigcommerce/stencil-utils';
+import { hooks } from './@bigcommerce/stencil-utils';
 console.log("data",hooks)
 // graphql call 
 fetch('/graphql', {
