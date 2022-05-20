@@ -1,3 +1,7 @@
+// test 
+var data = document.currentScript.getAttribute('one');
+
+// graphql call 
 fetch('/graphql', {
     method: 'POST',
     mode: 'cors',
