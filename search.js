@@ -7,7 +7,7 @@ fetch('/graphql', {
         query: `
         query productById{
 site {
-product(entityId: ${pid}) {
+product(entityId: '200') {
 
   entityId
   name
