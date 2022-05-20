@@ -1,7 +1,6 @@
 // test 
-import { hooks } from 'node_modules/@bigcommerce/stencil-utils';
-var data = document.currentScript.getAttribute('one');
-console.log("data",data)
+import { hooks } from '@bigcommerce/stencil-utils';
+console.log("data",hooks)
 // graphql call 
 fetch('/graphql', {
     method: 'POST',
