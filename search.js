@@ -1,41 +1,18 @@
-// test 
-import { hooks } from './@bigcommerce/stencil-utils';
-console.log("data",hooks)
+const graphql = async (token,query_) => {
 // graphql call 
-fetch('/graphql', {
+var responce = await fetch('/graphql', {
     method: 'POST',
     mode: 'cors',
     headers: { 'Content-Type': 'application/json',
-             'Authorization': `Bearer {{ settings.storefront_api.token }}`},
+             'Authorization': `Bearer ${token}`},
     body: JSON.stringify({
-        query: `
-        query productById{
-site {
-product(entityId: '200') {
-
-  entityId
-  name
-
-inventory
-  {
-    isInStock
-  }
-    availabilityV2{
-    ... on ProductPreOrder {
-        message
-        status
-      }
-    status
-  }
-  path
-}
-}
-}
-
-`
+        query: query_
   }),
   })
   .then(res => res.json())
   .then(data1 => {
       console.log("worked", data1)
+      return data1
   })
+  return responce
+}
