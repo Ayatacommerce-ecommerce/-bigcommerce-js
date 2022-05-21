@@ -1,6 +1,6 @@
-const graphql = async (token,query_) => {
+const graphql =  (token,query_) => {
 // graphql call 
-var responce = await fetch('/graphql', {
+var responce =  fetch('/graphql', {
     method: 'POST',
     mode: 'cors',
     headers: { 'Content-Type': 'application/json',
