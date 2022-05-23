@@ -39,10 +39,8 @@ var reseller_list =  (countrycode) => {
             })
                 }
                 else{
-                    $('.howtobuylis').append(`
-                    <h2>There is no retailer available</h2>
-                    `)
                     $('.zn-element-wrapper h2').remove()
+                    $(".howtobuyrow").html(`<h2>There is no retailer available</h2>`).css({"justify-content": "space-between", "color": "white"});
                 }
         },
       error: function (jqXHR, exception) {
