@@ -9,7 +9,7 @@ var reseller_list =  (countrycode) => {
         success: function(data){
             console.log(data)
             console.log('currency success')
-           if(data)
+           if(data.length > 0)
                 {
              $('.howtobuyrow').replaceWith(`<div class="row howtobuylis" style="margin-top:20px"></div>`)
             data.forEach( main => {
@@ -37,6 +37,12 @@ var reseller_list =  (countrycode) => {
           `)
                 
             })
+                }
+                else{
+                    $('.howtobuylis').append(`
+                    <h2>There is no retailer available</h2>
+                    `)
+                    $('.zn-element-wrapper h2').remove()
                 }
         },
       error: function (jqXHR, exception) {
