@@ -1,4 +1,4 @@
-var reseller_list =  (countrycode) => {
+var reseller_list =  (countrycode) => { 
      
     $.ajax({
         type: "post",
