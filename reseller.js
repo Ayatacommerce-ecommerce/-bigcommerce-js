@@ -3,7 +3,7 @@ var reseller_list =  (countrycode) => {
     $.ajax({
         type: "post",
         url: "//nextbase-d2c-apps.herokuapp.com/get_retailer_api",
-        data: {"country_code":countrycode},
+        data: {"country_code":countrycode.toUpperCase()},
         cache: false,
         dataType: "json",
         success: function(data){
